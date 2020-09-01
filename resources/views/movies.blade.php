@@ -5,7 +5,7 @@
 @section('content')
         <h1>My movies:</h1>
         @foreach ($movies as $movie)
-            <a href="">{{$movie->title}}    </a>
+            <a href="{{route('singleMovie', ['id' => $movie->id])}}">{{$movie->title}}</a>
             <p>{{$movie->storyline}}</p>
         @endforeach
 @endsection

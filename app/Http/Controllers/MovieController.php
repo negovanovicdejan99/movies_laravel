@@ -47,7 +47,19 @@ class MovieController extends Controller
      */
     public function show($id)
     {
-        //
+        $movie = Movie::findOrFail($id);
+ 
+         $title = $movie->title;
+         $body = $movie->body;
+        
+         return view('movie', [
+             'id' => $movie->id,
+             'title' => $movie->title,
+             'genre' => $movie->genre,
+             'director' => $movie->director,
+             'year_of_publishing' => $movie->year_of_publishing,
+             'storyline' => $movie->storyline
+         ]);
     }
 
     /**

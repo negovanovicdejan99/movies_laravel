@@ -15,7 +15,7 @@ class MovieController extends Controller
     public function index()
     {
         $movies = Movie::get();
-        return view('movies', compact('movies'));
+        return view('movies.movies', compact('movies'));
     }
 
     /**
@@ -25,7 +25,7 @@ class MovieController extends Controller
      */
     public function create()
     {
-        //
+        return view('movies.create');
     }
 
     /**
@@ -52,7 +52,7 @@ class MovieController extends Controller
          $title = $movie->title;
          $body = $movie->body;
         
-         return view('movie', [
+         return view('movies.movie', [
              'id' => $movie->id,
              'title' => $movie->title,
              'genre' => $movie->genre,

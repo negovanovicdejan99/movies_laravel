@@ -6,7 +6,7 @@
     <body> 
         <div>
             <a href="/movies">Movies</a>
-            <a href="/add">Add</a>
+            <a href="/create">Add</a>
         </div>
         <div class="container">
             @yield('content')

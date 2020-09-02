@@ -63,7 +63,8 @@ class MovieController extends Controller
              'genre' => $movie->genre,
              'director' => $movie->director,
              'year_of_publishing' => $movie->year_of_publishing,
-             'storyline' => $movie->storyline
+             'storyline' => $movie->storyline,
+             'comments' => $movie->comments
          ]);
     }
 
